@@ -1,5 +1,6 @@
 package domain.object;
 
+import domain.behavior.FlyBehavior;
 import lombok.Getter;
 
 public abstract class Duck {
@@ -25,4 +26,6 @@ public abstract class Duck {
     }
 
     public abstract void fly();
+
+    public abstract void setFlyBehavior(FlyBehavior flyBehavior);
 }
