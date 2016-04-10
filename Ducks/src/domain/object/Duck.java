@@ -2,11 +2,14 @@ package domain.object;
 
 import domain.behavior.FlyBehavior;
 import lombok.Getter;
+import lombok.Setter;
 
 public abstract class Duck {
 
     private static final String SWIM_FORMAT = "%s is swimming.";
     private static final String EAT_FORMAT = "%s is eating.";
+
+    @Setter protected FlyBehavior flyBehavior;
 
     @Getter
     private String name;
@@ -26,6 +29,4 @@ public abstract class Duck {
     }
 
     public abstract void fly();
-
-    public abstract void setFlyBehavior(FlyBehavior flyBehavior);
 }
