@@ -26,4 +26,8 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
         String msg = String.format(DISPLAY_FORMAT, heatIndex);
         System.out.println(msg);
     }
+
+    public void unsubscribe() {
+        subject.unregister(this);
+    }
 }

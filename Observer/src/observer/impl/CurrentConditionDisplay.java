@@ -12,10 +12,10 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
 
     private double temperature;
     private double humidity;
-    private Subject weatherData;
+    private Subject subject;
 
     public CurrentConditionDisplay(Subject subject) {
-        this.weatherData = subject;
+        this.subject = subject;
     }
 
     @Override
@@ -31,5 +31,9 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
                 this.temperature,
                 this.humidity);
         System.out.println(message);
+    }
+
+    public void unsubscribe() {
+        subject.unregister(this);
     }
 }

@@ -15,10 +15,10 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     private List<Double> temperatureHistory;
     double max;
     double min;
-    private Subject weatherData;
+    private Subject subject;
 
     public StatisticsDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
+        this.subject = weatherData;
         temperatureHistory = new ArrayList<>();
     }
 
@@ -37,6 +37,10 @@ public class StatisticsDisplay implements Observer, DisplayElement {
                 max,
                 min);
         System.out.println(message);
+    }
+
+    public void unsubscribe() {
+        subject.unregister(this);
     }
 
     private double getAverage() {
