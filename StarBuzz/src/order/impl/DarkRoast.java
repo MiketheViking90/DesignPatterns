@@ -9,8 +9,8 @@ public class DarkRoast extends Beverage {
 
     public DarkRoast(Size size) {
         this.size = size;
-        cost = 2.00;
-        description = new ArrayList<>();
-        description.add("DarkRoast");
+        this.cost = 2.00;
+        this.description = new ArrayList<>();
+        this.description.add("DarkRoast");
     }
 }

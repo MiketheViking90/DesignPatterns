@@ -9,9 +9,9 @@ public class Espresso extends Beverage {
 
     public Espresso(Size size) {
         this.size = size;
-        cost = 2.50;
-        description = new ArrayList<>();
-        description.add("Espresso");
+        this.cost = 2.50;
+        this.description = new ArrayList<>();
+        this.description.add("Espresso");
     }
 
 }
