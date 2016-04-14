@@ -8,11 +8,11 @@ public class Mocha extends CondimentDecorator {
     private static final double COST_OF_MOCHA = 0.85;
 
     public Mocha(Beverage beverage) {
-        this.beverage = beverage;
-        this.size = beverage.getSize();
-
-        this.cost = COST_OF_MOCHA;
+        super(beverage);
         this.name = "Mocha";
+
+        this.cost = beverage.getCost() + COST_OF_MOCHA;
+        description.add(name);
     }
 
 }
