@@ -1,19 +1,17 @@
 package order.impl;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import order.Beverage;
+import order.Size;
 
-public class Espresso implements Beverage {
+public class Espresso extends Beverage {
 
-    @Override
-    public double getCost() {
-        return 2.50;
+    public Espresso(Size size) {
+        this.size = size;
+        cost = 2.50;
+        description = new ArrayList<>();
+        description.add("Espresso");
     }
 
-    @Override
-    public List<String> getCondiments() {
-        return new ArrayList<>();
-    }
 }

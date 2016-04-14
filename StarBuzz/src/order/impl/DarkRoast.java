@@ -1,19 +1,16 @@
 package order.impl;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import order.Beverage;
+import order.Size;
 
-public class DarkRoast implements Beverage {
+public class DarkRoast extends Beverage {
 
-    @Override
-    public double getCost() {
-        return 2.00;
-    }
-
-    @Override
-    public List<String> getCondiments() {
-        return new ArrayList<>();
+    public DarkRoast(Size size) {
+        this.size = size;
+        cost = 2.00;
+        description = new ArrayList<>();
+        description.add("DarkRoast");
     }
 }

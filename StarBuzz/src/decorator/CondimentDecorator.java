@@ -2,11 +2,8 @@ package decorator;
 
 import order.Beverage;
 
-public abstract class CondimentDecorator implements Beverage {
+public abstract class CondimentDecorator extends Beverage {
 
     protected Beverage beverage;
 
-    protected CondimentDecorator(Beverage beverage) {
-        this.beverage = beverage;
-    }
 }

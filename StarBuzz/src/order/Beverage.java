@@ -2,10 +2,12 @@ package order;
 
 import java.util.List;
 
-public interface Beverage {
+import lombok.Getter;
 
-    public double getCost();
+public abstract class Beverage {
 
-    public List<String> getCondiments();
+    @Getter protected double cost;
+    @Getter protected List<String> description;
+    @Getter protected Size size;
 
 }
