@@ -1,2 +1,2 @@
 # DesignPatterns
-Practice design patterns.
+Repository for perosnal use to practice design patterns.
