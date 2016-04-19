@@ -1,4 +1,4 @@
-package request.impl;
+package receiver.impl;
 
 import lombok.Getter;
 

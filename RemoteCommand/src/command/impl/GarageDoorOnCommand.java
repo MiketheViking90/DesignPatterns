@@ -1,7 +1,7 @@
 package command.impl;
 
 import command.Command;
-import request.impl.GarageDoor;
+import receiver.impl.GarageDoor;
 
 public class GarageDoorOnCommand implements Command {
 

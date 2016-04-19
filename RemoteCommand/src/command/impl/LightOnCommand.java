@@ -1,7 +1,7 @@
 package command.impl;
 
 import command.Command;
-import request.impl.Light;
+import receiver.impl.Light;
 
 public class LightOnCommand implements Command {
 

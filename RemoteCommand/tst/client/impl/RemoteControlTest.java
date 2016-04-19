@@ -3,8 +3,8 @@ package client.impl;
 import command.Command;
 import command.impl.GarageDoorOnCommand;
 import command.impl.LightOnCommand;
-import request.impl.GarageDoor;
-import request.impl.Light;
+import receiver.impl.GarageDoor;
+import receiver.impl.Light;
 
 public class RemoteControlTest {
 
