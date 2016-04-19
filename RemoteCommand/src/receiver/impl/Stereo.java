@@ -2,17 +2,18 @@ package receiver.impl;
 
 import lombok.Getter;
 
-public class GarageDoor {
+public class Stereo {
 
     @Getter private boolean isOpen;
     @Getter private String name;
 
-    public GarageDoor() {
+    public Stereo() {
         isOpen = false;
-        name = "GarageDoor";
+        name = "Stereo";
     }
 
-    public void toggleDoor() {
+    public void eject() {
         isOpen = !isOpen;
     }
+
 }

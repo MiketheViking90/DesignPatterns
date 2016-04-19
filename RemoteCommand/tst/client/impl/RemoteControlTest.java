@@ -1,8 +1,8 @@
 package client.impl;
 
 import command.Command;
-import command.impl.GarageDoorOnCommand;
-import command.impl.LightOnCommand;
+import command.impl.GarageDoorCommand;
+import command.impl.LightCommand;
 import receiver.impl.GarageDoor;
 import receiver.impl.Light;
 
@@ -11,7 +11,7 @@ public class RemoteControlTest {
     public static void main(String[] args) {
         SimpleRemoteControl rc = new SimpleRemoteControl();
         Light light = new Light();
-        Command lightSwitch = new LightOnCommand(light);
+        Command lightSwitch = new LightCommand(light);
 
         rc.setSlot(lightSwitch);
         rc.pressButton();
@@ -19,7 +19,7 @@ public class RemoteControlTest {
         rc.pressButton();
 
         GarageDoor door = new GarageDoor();
-        Command garageDongle = new GarageDoorOnCommand(door);
+        Command garageDongle = new GarageDoorCommand(door);
 
         rc.setSlot(garageDongle);
         rc.pressButton();

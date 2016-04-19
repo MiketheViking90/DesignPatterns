@@ -5,6 +5,11 @@ import lombok.Getter;
 public class Light {
 
     @Getter private boolean isOn;
+    @Getter protected String name;
+
+    public Light() {
+        name = "Light";
+    }
 
     public void turnOn() {
         if (!isOn) {
