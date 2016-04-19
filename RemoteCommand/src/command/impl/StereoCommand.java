@@ -17,6 +17,11 @@ public class StereoCommand implements Command {
         printExecution();
     }
 
+    @Override
+    public void undo() {
+        execute();
+    }
+
     public StereoCommand(Stereo stereo) {
         stereoReceiver = stereo;
     }

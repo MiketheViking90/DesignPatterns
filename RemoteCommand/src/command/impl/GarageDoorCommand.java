@@ -15,6 +15,11 @@ public class GarageDoorCommand implements Command {
         printExecution();
     }
 
+    @Override
+    public void undo() {
+        execute();
+    }
+
     public GarageDoorCommand(GarageDoor garageDoor) {
         this.garageDoor = garageDoor;
     }

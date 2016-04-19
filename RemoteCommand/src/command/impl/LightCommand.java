@@ -19,8 +19,14 @@ public class LightCommand implements Command {
         printExecution();
     }
 
+    @Override
+    public void undo() {
+        execute();
+    }
+
     private void printExecution() {
         String msg = String.format(DISPLAY_FORMAT, light.getName(), light.isOn());
         System.out.println(msg);
     }
+
 }

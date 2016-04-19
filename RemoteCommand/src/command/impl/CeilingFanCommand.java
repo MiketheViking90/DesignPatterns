@@ -17,6 +17,11 @@ public class CeilingFanCommand implements Command {
         printExecution();
     }
 
+    @Override
+    public void undo() {
+        execute();
+    }
+
     public CeilingFanCommand(CeilingFan fan) {
         this.fanReceiver = fan;
     }

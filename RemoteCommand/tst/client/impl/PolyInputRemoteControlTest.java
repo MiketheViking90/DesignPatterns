@@ -17,7 +17,8 @@ public class PolyInputRemoteControlTest {
     public static void main(String[] args) {
         PolyInputRemoteControl rc = getPresetRemoteControl();
 
-        rc.toggleAll();
+        rc.pressButton1();
+        rc.undo();
     }
 
     private static PolyInputRemoteControl getPresetRemoteControl() {
