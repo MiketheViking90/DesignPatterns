@@ -87,8 +87,10 @@ public class PolyInputRemoteControl {
     }
 
     public void undo() {
-        Command lastCommand = undo.pop();
-        lastCommand.undo();
+        if (!undo.isEmpty()) {
+            Command lastCommand = undo.pop();
+            lastCommand.undo();
+        }
     }
 
     private PolyInputRemoteControl() {

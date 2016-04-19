@@ -18,6 +18,11 @@ public class PolyInputRemoteControlTest {
         PolyInputRemoteControl rc = getPresetRemoteControl();
 
         rc.pressButton1();
+        rc.pressButton2();
+        rc.pressButton4();
+        rc.pressButton3();
+        rc.undo();
+        rc.undo();
         rc.undo();
     }
 
