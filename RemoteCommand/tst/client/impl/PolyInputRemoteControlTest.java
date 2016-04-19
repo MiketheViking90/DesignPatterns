@@ -5,6 +5,7 @@ import command.impl.CeilingFanCommand;
 import command.impl.GarageDoorCommand;
 import command.impl.LightCommand;
 import command.impl.StereoCommand;
+import invoker.impl.PolyInputRemoteControl;
 import receiver.impl.CeilingFan;
 import receiver.impl.GarageDoor;
 import receiver.impl.KitchenLight;

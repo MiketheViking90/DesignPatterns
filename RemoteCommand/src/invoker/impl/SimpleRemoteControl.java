@@ -1,4 +1,4 @@
-package client.impl;
+package invoker.impl;
 
 import command.Command;
 import lombok.Setter;

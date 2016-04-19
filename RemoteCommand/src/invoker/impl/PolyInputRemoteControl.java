@@ -1,6 +1,7 @@
-package client.impl;
+package invoker.impl;
 
 import command.Command;
+import command.impl.NullCommand;
 
 public class PolyInputRemoteControl {
 
@@ -62,14 +63,15 @@ public class PolyInputRemoteControl {
 
     public void toggleAll() {
         for (Command c : commands) {
-            if (c != null) {
-                c.execute();
-            }
+            c.execute();
         }
     }
 
     private PolyInputRemoteControl() {
         commands = new Command[NUM_INPUTS];
+        for (int i = 0; i < NUM_INPUTS; i++) {
+            setCommand(i, new NullCommand());
+        }
     }
 
 }

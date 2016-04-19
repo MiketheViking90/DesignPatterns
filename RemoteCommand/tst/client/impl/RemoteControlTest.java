@@ -3,6 +3,7 @@ package client.impl;
 import command.Command;
 import command.impl.GarageDoorCommand;
 import command.impl.LightCommand;
+import invoker.impl.SimpleRemoteControl;
 import receiver.impl.GarageDoor;
 import receiver.impl.Light;
 
