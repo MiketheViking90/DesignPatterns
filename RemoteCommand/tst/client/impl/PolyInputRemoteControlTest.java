@@ -1,9 +1,13 @@
 package client.impl;
 
+import java.util.Arrays;
+import java.util.List;
+
 import command.Command;
 import command.impl.CeilingFanCommand;
 import command.impl.GarageDoorCommand;
 import command.impl.LightCommand;
+import command.impl.PartyModeMacroCommand;
 import command.impl.StereoCommand;
 import invoker.impl.PolyInputRemoteControl;
 import receiver.impl.CeilingFan;
@@ -17,13 +21,11 @@ public class PolyInputRemoteControlTest {
     public static void main(String[] args) {
         PolyInputRemoteControl rc = getPresetRemoteControl();
 
-        rc.pressButton1();
-        rc.pressButton2();
-        rc.pressButton4();
-        rc.pressButton3();
+        rc.pressButton6();
+        System.out.println();
         rc.undo();
-        rc.undo();
-        rc.undo();
+        System.out.println();
+        rc.pressButton6();
     }
 
     private static PolyInputRemoteControl getPresetRemoteControl() {
@@ -43,7 +45,26 @@ public class PolyInputRemoteControlTest {
 
         Command command5 = getCeilingFanCommand();
         rc.setCommand(5, command5);
+
+        Command command6 = getPartyModeCommand();
+        rc.setCommand(6, command6);
+
         return rc;
+    }
+
+    private static Command getPartyModeCommand() {
+        KitchenLight light = new KitchenLight();
+        Command lc = new LightCommand(light);
+
+        CeilingFan fan = new CeilingFan();
+        Command cfc = new CeilingFanCommand(fan);
+
+        GarageDoor garageDoor = new GarageDoor();
+        Command gdc = new GarageDoorCommand(garageDoor);
+
+        List<Command> partyModeCommands = Arrays.asList(lc, cfc, gdc);
+        PartyModeMacroCommand pmmc = new PartyModeMacroCommand(partyModeCommands);
+        return pmmc;
     }
 
     private static Command getKitchenLightCommand() {
