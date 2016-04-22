@@ -6,17 +6,23 @@ public abstract class Drink {
         boilWater();
         prepareDrink();
         pourInCup();
-        addCondiments();
+        if (customerWantsCondiments()) {
+            addCondiments();
+        }
     }
-    protected abstract void pourInCup();
-
+    protected abstract void prepareDrink();
     protected abstract void addCondiments();
 
     protected void boilWater() {
         System.out.println("Boiling water");
     }
 
-    protected void prepareDrink() {
-        System.out.println("Preparing drink");
+
+    protected void pourInCup() {
+        System.out.println("Pouring in cup");
+    }
+
+    protected boolean customerWantsCondiments() {
+        return true;
     }
 }
