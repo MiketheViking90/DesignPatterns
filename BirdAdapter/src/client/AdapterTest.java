@@ -36,5 +36,12 @@ public class AdapterTest {
         duckAdapter.gobble();
         duckAdapter.fly();
         System.out.println();
+
+        testAssertion(12);
+    }
+
+    private static void testAssertion(int i) {
+        assert (i > 100);
+        System.out.println(1);
     }
 }
