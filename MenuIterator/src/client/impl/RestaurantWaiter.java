@@ -1,11 +1,12 @@
 package client.impl;
 
+import java.util.Iterator;
+
 import client.Waiter;
+import collection.Menu;
 import collection.impl.DinerMenu;
-import collection.impl.Menu;
 import collection.impl.PancakeHouseMenu;
 import domain.MenuItem;
-import iterator.MenuIterator;
 
 public class RestaurantWaiter implements Waiter {
 
@@ -19,8 +20,8 @@ public class RestaurantWaiter implements Waiter {
 
     @Override
     public void printMenu() {
-        MenuIterator pancakeHouseIterator = pancakeHouseMenu.createIterator();
-        MenuIterator dinerHouseIterator = dinerMenu.createIterator();
+        Iterator<MenuItem> pancakeHouseIterator = pancakeHouseMenu.createIterator();
+        Iterator<MenuItem> dinerHouseIterator = dinerMenu.createIterator();
 
         System.out.println("MENU\n-----\nBREAKFAST");
         printMenu(pancakeHouseIterator);
@@ -30,8 +31,8 @@ public class RestaurantWaiter implements Waiter {
 
     @Override
     public boolean isItemVegetarian(String name) {
-        MenuIterator pancakeHouseIterator = pancakeHouseMenu.createIterator();
-        MenuIterator dinerHouseIterator = dinerMenu.createIterator();
+        Iterator<MenuItem> pancakeHouseIterator = pancakeHouseMenu.createIterator();
+        Iterator<MenuItem> dinerHouseIterator = dinerMenu.createIterator();
 
         boolean isPancakeHouseMenuItemVege = getIsVegetarian(name, pancakeHouseIterator);
         boolean isDinerMenuItemVege = getIsVegetarian(name, dinerHouseIterator);
@@ -39,7 +40,7 @@ public class RestaurantWaiter implements Waiter {
         return (isPancakeHouseMenuItemVege || isDinerMenuItemVege);
     }
 
-    private boolean getIsVegetarian(String name, MenuIterator iterator) {
+    private boolean getIsVegetarian(String name, Iterator<MenuItem> iterator) {
         while (iterator.hasNext()) {
             MenuItem item = iterator.next();
             if (item.getName().equals(name)) {
@@ -49,7 +50,7 @@ public class RestaurantWaiter implements Waiter {
         return false;
     }
 
-    private void printMenu(MenuIterator iterator) {
+    private void printMenu(Iterator<MenuItem> iterator) {
         while (iterator.hasNext()) {
             MenuItem item = iterator.next();
             System.out.println(item);

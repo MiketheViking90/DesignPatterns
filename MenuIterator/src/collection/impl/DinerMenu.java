@@ -1,8 +1,10 @@
 package collection.impl;
 
+import java.util.Iterator;
+
+import collection.Menu;
 import domain.MenuItem;
 import iterator.DinerMenuIterator;
-import iterator.MenuIterator;
 
 public class DinerMenu extends Menu {
 
@@ -39,7 +41,7 @@ public class DinerMenu extends Menu {
     }
 
     @Override
-    public MenuIterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menu);
     }
 }

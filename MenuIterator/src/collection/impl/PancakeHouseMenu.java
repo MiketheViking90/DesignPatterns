@@ -1,11 +1,11 @@
 package collection.impl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import collection.Menu;
 import domain.MenuItem;
-import iterator.MenuIterator;
-import iterator.PancakeHouseIterator;
 
 public class PancakeHouseMenu extends Menu {
 
@@ -41,7 +41,7 @@ public class PancakeHouseMenu extends Menu {
     }
 
     @Override
-    public MenuIterator createIterator() {
-        return new PancakeHouseIterator(menu);
+    public Iterator<MenuItem> createIterator() {
+        return menu.iterator();
     }
 }
