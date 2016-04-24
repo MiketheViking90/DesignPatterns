@@ -14,6 +14,7 @@ public class DinerMenu extends Menu {
     private int numItems = 0;
 
     public DinerMenu() {
+        name = "DinerMenu";
         menu = new MenuItem[MAX_SIZE];
 
         MenuItem coffee = new MenuItem("coffee",

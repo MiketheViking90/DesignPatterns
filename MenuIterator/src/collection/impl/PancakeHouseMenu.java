@@ -12,6 +12,7 @@ public class PancakeHouseMenu extends Menu {
     private List<MenuItem> menu;
 
     public PancakeHouseMenu() {
+        name = "PancakeHouseMenu";
         menu = new ArrayList<>();
 
         MenuItem pancakes = new MenuItem("pancakes",
@@ -19,7 +20,7 @@ public class PancakeHouseMenu extends Menu {
                 false,
                 2.99);
 
-        MenuItem bbPancakes = new MenuItem("blueberry pancakges",
+        MenuItem bbPancakes = new MenuItem("blueberry pancakes",
                 "panckaes made with blueberries",
                 true,
                 3.49);
