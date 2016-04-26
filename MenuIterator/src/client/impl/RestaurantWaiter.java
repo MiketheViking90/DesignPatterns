@@ -74,7 +74,7 @@ public class RestaurantWaiter implements Waiter {
         Waiter waiter = new RestaurantWaiter(Arrays.asList(pancakeHouseMenu, dinerMenu, cafeMenu));
         waiter.printMenu();
 
-        boolean isVegetarian = waiter.isItemVegetarian("blueberry pancakes");
+        boolean isVegetarian = waiter.isItemVegetarian("Veggie Burrger");
         System.out.println(isVegetarian);
     }
 }
