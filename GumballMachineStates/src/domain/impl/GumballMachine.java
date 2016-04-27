@@ -17,18 +17,20 @@ public class GumballMachine {
     @Getter private State soldOutState;
     @Getter private State winnerState;
 
-    @Setter private State state;
+    @Getter private final String location;
+    @Getter @Setter private State state;
     @Getter private int count;
 
-    public GumballMachine() {
+    public GumballMachine(String location, int count) {
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         soldOutState = new SoldOutState(this);
         winnerState = new WinnerState(this);
 
+        this.location = location;
+        this.count = count;
         state = noQuarterState;
-        count = 3;
     }
 
     public void insertQuarter() {
