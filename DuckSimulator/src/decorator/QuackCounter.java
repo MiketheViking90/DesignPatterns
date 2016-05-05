@@ -1,9 +1,10 @@
 package decorator;
 
 import behaviors.Quackable;
+import birds.AbstractDuck;
 import lombok.Getter;
 
-public class QuackCounter implements Quackable {
+public class QuackCounter extends AbstractDuck {
 
     private Quackable duck;
     @Getter private static int count = 0;

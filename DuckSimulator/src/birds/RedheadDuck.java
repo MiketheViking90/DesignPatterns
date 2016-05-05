@@ -1,8 +1,6 @@
 package birds;
 
-import behaviors.Quackable;
-
-public class RedheadDuck implements Quackable {
+public class RedheadDuck extends AbstractDuck {
 
     @Override
     public void quack() {

@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import behaviors.Quackable;
+import birds.AbstractDuck;
 
-public class DuckFlock implements Quackable {
+public class DuckFlock extends AbstractDuck {
 
     List<Quackable> flock;
 

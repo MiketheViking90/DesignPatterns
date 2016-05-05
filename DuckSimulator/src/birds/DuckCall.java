@@ -1,8 +1,10 @@
 package birds;
 
-import behaviors.Quackable;
+import observer.impl.DuckObservable;
 
-public class DuckCall implements Quackable {
+public class DuckCall extends AbstractDuck {
+
+    DuckObservable observable;
 
     @Override
     public void quack() {

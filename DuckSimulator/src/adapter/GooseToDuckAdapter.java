@@ -1,9 +1,9 @@
 package adapter;
 
-import behaviors.Quackable;
+import birds.AbstractDuck;
 import birds.Goose;
 
-public class GooseToDuckAdapter implements Quackable {
+public class GooseToDuckAdapter extends AbstractDuck {
 
     private Goose goose;
 
