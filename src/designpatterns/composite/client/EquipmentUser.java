@@ -1,10 +1,10 @@
-package composite.client;
+package designpatterns.composite.client;
 
-import composite.composites.CompositeEquipment;
-import composite.composites.DiskDrive;
-import composite.composites.Equipment;
+import designpatterns.composite.composites.CompositeEquipment;
+import designpatterns.composite.composites.DiskDrive;
+import designpatterns.composite.composites.Equipment;
 
-public class User {
+public class EquipmentUser {
 
     public static void main(String[] args) {
         Equipment diskDrive1 = new DiskDrive();

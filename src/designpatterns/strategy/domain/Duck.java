@@ -1,7 +1,7 @@
-package strategy.domain;
+package designpatterns.strategy.domain;
 
-import strategy.strategies.Flyable;
-import strategy.strategies.Quackable;
+import designpatterns.strategy.strategies.Flyable;
+import designpatterns.strategy.strategies.Quackable;
 
 public abstract class Duck {
 

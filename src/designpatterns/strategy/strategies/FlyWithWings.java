@@ -1,4 +1,4 @@
-package strategy.strategies;
+package designpatterns.strategy.strategies;
 
 public class FlyWithWings implements Flyable {
 

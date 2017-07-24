@@ -1,9 +1,9 @@
-package strategy.domain;
+package designpatterns.strategy.domain;
 
-import strategy.strategies.FlyWithWings;
-import strategy.strategies.Flyable;
-import strategy.strategies.Quack;
-import strategy.strategies.Quackable;
+import designpatterns.strategy.strategies.FlyWithWings;
+import designpatterns.strategy.strategies.Flyable;
+import designpatterns.strategy.strategies.Quack;
+import designpatterns.strategy.strategies.Quackable;
 
 public class MallardDuck extends Duck {
 

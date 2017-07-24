@@ -1,4 +1,4 @@
-package composite.composites;
+package designpatterns.composite.composites;
 
 public interface Equipment {
 
